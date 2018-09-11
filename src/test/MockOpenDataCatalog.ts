@@ -1,21 +1,16 @@
-const express = require("express");
+import { MockExpressServer } from "@magda/typescript-common/dist/test/connectors/MockExpressServer";
 
-export class MockOpenDataCatalog {
+export class MockOpenDataCatalog extends MockExpressServer {
     spec: any;
-    server: any;
 
     constructor(spec: any) {
+        super();
         this.spec = spec;
     }
 
-    run(port: number) {
-        const registry: any = express();
-
+    runImplementation(registry: any) {
         registry.all("*", (req: any, res: any) => {
             res.json(this.spec);
         });
-
-        this.server = registry.listen(port);
-        return this;
     }
 }
