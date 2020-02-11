@@ -1,8 +1,10 @@
-import addJwtSecretFromEnvVar from "magda-typescript-common/src/session/addJwtSecretFromEnvVar";
+import { addJwtSecretFromEnvVar } from "@magda/utils";
 import createTransformer from "./createTransformer";
-import JsonConnector from "magda-typescript-common/src/JsonConnector";
+import {
+    JsonConnector,
+    AuthorizedRegistryClient as Registry
+} from "@magda/connector-sdk";
 import ProjectOpenData from "./ProjectOpenData";
-import Registry from "magda-typescript-common/src/registry/AuthorizedRegistryClient";
 import organizationAspectBuilders from "./organizationAspectBuilders";
 import datasetAspectBuilders from "./datasetAspectBuilders";
 import distributionAspectBuilders from "./distributionAspectBuilders";

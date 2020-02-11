@@ -2,8 +2,11 @@ import {} from "mocha";
 import nock from "nock";
 import { expect } from "chai";
 
-import Registry from "magda-typescript-common/src/registry/AuthorizedRegistryClient";
-import JsonConnector from "magda-typescript-common/src/JsonConnector";
+import {
+    JsonConnector,
+    AuthorizedRegistryClient as Registry,
+    TenantConsts
+} from "@magda/connector-sdk";
 
 import createTransformer from "../createTransformer";
 import ProjectOpenData from "../ProjectOpenData";
@@ -11,7 +14,8 @@ import organizationAspectBuilders from "../organizationAspectBuilders";
 import datasetAspectBuilders from "../datasetAspectBuilders";
 import distributionAspectBuilders from "../distributionAspectBuilders";
 import ProjectOpenDataTransformer from "../ProjectOpenDataTransformer";
-import { MAGDA_ADMIN_PORTAL_ID } from "@magda/typescript-common/src/registry/TenantConsts";
+
+const { MAGDA_ADMIN_PORTAL_ID } = TenantConsts;
 
 describe("when distributions have a license as a custom URL", function(this: Mocha.ISuiteCallbackContext) {
     let registry: Registry;

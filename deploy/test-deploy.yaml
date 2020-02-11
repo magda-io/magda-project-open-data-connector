@@ -1,0 +1,9 @@
+image:
+  imagePullSecret: gh-docker
+  tag: latest
+includeCronJobs: true
+includeInitialJobs: true
+config:
+  id: vic-cardinia
+  name: Cardinia Shire Council
+  sourceUrl: https://data-cscgis.opendata.arcgis.com/data.json

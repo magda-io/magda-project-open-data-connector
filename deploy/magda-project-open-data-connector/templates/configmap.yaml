@@ -1,0 +1,8 @@
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Chart.Name }}-{{ .Values.config.id }}
+data:
+  # When the config map is mounted as a volume, these will be created as files.
+  config.json: '{{ toJson .Values.config | indent 2 }}'

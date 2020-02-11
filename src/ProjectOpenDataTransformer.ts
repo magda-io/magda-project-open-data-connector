@@ -1,7 +1,8 @@
-import JsonTransformer, {
+import {
+    ConnectorRecordId,
+    JsonTransformer,
     JsonTransformerOptions
-} from "magda-typescript-common/src/JsonTransformer";
-import ConnectorRecordId from "magda-typescript-common/src/ConnectorRecordId";
+} from "@magda/connector-sdk";
 
 export default class ProjectOpenDataTransformer extends JsonTransformer {
     constructor(options: JsonTransformerOptions) {

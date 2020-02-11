@@ -1,4 +1,4 @@
-import { runConnectorTest } from "magda-typescript-common/src/test/connectors/runConnectorTest";
+import { runConnectorTest } from "@magda/connector-test-utils";
 
 import { MockOpenDataCatalog } from "./MockOpenDataCatalog";
 

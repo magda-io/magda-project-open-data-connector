@@ -1,0 +1,6 @@
+apiVersion: v1
+name: magda-project-open-data-connector
+description: A Helm chart for Magda Project Open Data Connector
+version: "0.0.57-0"
+home: "https://github.com/magda-io/magda-project-open-data-connector"
+sources: ["https://github.com/magda-io/magda-project-open-data-connector"]

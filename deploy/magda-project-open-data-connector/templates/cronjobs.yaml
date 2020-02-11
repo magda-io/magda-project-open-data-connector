@@ -1,0 +1,54 @@
+{{- if .Values.includeCronJobs }}
+---
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: connector-{{ .Values.config.id }}
+spec:
+  schedule: {{ .Values.config.schedule | default "0 14 * * 6" }} # default = 12am Sydney time on Sunday"
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          name: connector-{{ .Values.config.id }}
+        spec:
+          {{- if or .Values.image.imagePullSecret .Values.global.image.imagePullSecret }}
+          imagePullSecrets:
+            - name: {{ .Values.image.imagePullSecret | default .Values.global.image.imagePullSecret}}
+          {{- end }}
+          containers:
+            - name: connector-{{ .Values.config.id }}
+              image: "{{ .Values.image.repository | default .Values.global.image.repository | default .Values.defaultImage.repository }}/{{ .Values.image.name }}:{{ .Values.image.tag | default .Values.global.image.tag | default .Values.defaultImage.tag }}"
+              imagePullPolicy: {{ .Values.image.pullPolicy | default .Values.global.image.pullPolicy | default .Values.defaultImage.pullPolicy }}
+              command:
+                - "node"
+                - "/usr/src/app/component/dist/index.js"
+                - "--tenantId"
+                - {{ .Values.config.tenantId | default .Values.defaultTenantId | quote }}
+                - "--config"
+                - "/etc/config/config.json"
+                - "--registryUrl"
+                - "http://registry-api/v0"
+              resources: 
+{{ .Values.resources | toYaml | indent 16 }}
+              volumeMounts:
+                - mountPath: /etc/config
+                  name: config
+              env:
+                - name: USER_ID
+                  value: 00000000-0000-4000-8000-000000000000
+                - name: JWT_SECRET
+                  valueFrom:
+                    secretKeyRef:
+                      name: auth-secrets
+                      key: jwt-secret
+          restartPolicy: "OnFailure"
+          volumes:
+            - name: config
+              configMap:
+                name: {{ .Chart.Name }}-{{ .Values.config.id }}
+                items:
+                  - key: connector-config.json
+                    path: config.json
+{{- end }}
