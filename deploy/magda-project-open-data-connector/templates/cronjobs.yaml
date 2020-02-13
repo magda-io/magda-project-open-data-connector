@@ -1,4 +1,8 @@
-{{- if .Values.includeCronJobs }}
+{{/*
+See chart value file for details of the logic used to generate this setting value below.!!!
+*/}}
+{{- $includeCronJobs := (ne (.Values.includeCronJobs | toString) "<nil>") | ternary .Values.includeCronJobs ( (ne (.Values.global.connectors.includeCronJobs | toString) "<nil>") | ternary .Values.global.connectors.includeCronJobs .Values.defaultSettings.includeCronJobs) -}}
+{{- if $includeCronJobs }}
 ---
 apiVersion: batch/v1beta1
 kind: CronJob

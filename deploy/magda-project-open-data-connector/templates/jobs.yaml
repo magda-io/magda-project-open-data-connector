@@ -1,4 +1,8 @@
-{{- if .Values.includeInitialJobs }}
+{{/*
+See chart value file for details of the logic used to generate this setting value below.!!!
+*/}}
+{{- $includeInitialJobs := (ne (.Values.includeInitialJobs | toString) "<nil>") | ternary .Values.includeInitialJobs ( (ne (.Values.global.connectors.includeInitialJobs | toString) "<nil>") | ternary .Values.global.connectors.includeInitialJobs .Values.defaultSettings.includeInitialJobs) -}}
+{{- if $includeInitialJobs }}
 ---
 apiVersion: batch/v1
 kind: Job

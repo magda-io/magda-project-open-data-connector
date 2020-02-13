@@ -1,5 +1,6 @@
 global:
   image: {}
+  connectors: {}
 
 image: 
   name: "magda-project-open-data-connector"
@@ -21,8 +22,22 @@ resources:
   limits:
     cpu: 100m
 
-includeInitialJobs: true
-includeCronJobs: false
+defaultSettings:
+  includeInitialJobs: false
+  includeCronJobs: true
+
+# Chart level .Values.includeInitialJobs is higher priority than 
+# .Values.global.includeInitialJobs
+# The value of includeInitialJobs or includeCronJobs is determined by:
+# - .Values.includeInitialJobs if its value is set
+# - Then .Values.global.includeInitialJobs if its value is set
+# - Then .Values.defaultSettings.includeInitialJobs
+# By default, .Values.includeInitialJobs is not set. 
+# Therefore, if .Values.global.includeInitialJobs is not set, .Values.defaultSettings.includeInitialJobs will be used.
+
+#includeInitialJobs: false
+#includeCronJobs: true
+
 defaultTenantId: 0
 
 config:
