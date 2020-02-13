@@ -1,7 +1,7 @@
 {{/*
 See chart value file for details of the logic used to generate this setting value below.!!!
 */}}
-{{- $includeCronJobs := (ne (.Values.includeCronJobs | toString) "<nil>") | ternary .Values.includeCronJobs ( (ne (.Values.global.connectors.includeCronJobs | toString) "<nil>") | ternary .Values.global.connectors.includeCronJobs .Values.defaultSettings.includeCronJobs) -}}
+{{- $includeCronJobs := (ne (.Values.includeCronJobs | typeOf) "<nil>") | ternary .Values.includeCronJobs ( (ne (.Values.global.connectors.includeCronJobs | typeOf) "<nil>") | ternary .Values.global.connectors.includeCronJobs .Values.defaultSettings.includeCronJobs) -}}
 {{- if $includeCronJobs }}
 ---
 apiVersion: batch/v1beta1
@@ -17,14 +17,18 @@ spec:
         metadata:
           name: connector-{{ .Values.config.id }}
         spec:
-          {{- if or .Values.image.imagePullSecret .Values.global.image.imagePullSecret }}
+{{- /*
+See chart value file for details of the logic used to generate this setting value below.!!!
+*/}}
+{{- $imagePullSecret := (ne (.Values.image.imagePullSecret | typeOf) "<nil>") | ternary .Values.image.imagePullSecret ( (ne (.Values.global.connectors.image.imagePullSecret | typeOf) "<nil>") | ternary .Values.global.connectors.image.imagePullSecret (  (ne (.Values.global.image.imagePullSecret | typeOf) "<nil>") | ternary .Values.global.image.imagePullSecret .Values.defaultImage.imagePullSecret )  ) -}}
+          {{- if ne ($imagePullSecret | toString) "false" }}
           imagePullSecrets:
-            - name: {{ .Values.image.imagePullSecret | default .Values.global.image.imagePullSecret}}
+            - name: {{ $imagePullSecret }}
           {{- end }}
           containers:
             - name: connector-{{ .Values.config.id }}
-              image: "{{ .Values.image.repository | default .Values.global.image.repository | default .Values.defaultImage.repository }}/{{ .Values.image.name }}:{{ .Values.image.tag | default .Values.global.image.tag | default .Values.defaultImage.tag }}"
-              imagePullPolicy: {{ .Values.image.pullPolicy | default .Values.global.image.pullPolicy | default .Values.defaultImage.pullPolicy }}
+              image: "{{ .Values.image.repository | default .Values.global.connectors.image.repository | default .Values.global.image.repository | default .Values.defaultImage.repository }}/{{ .Values.image.name }}:{{ .Values.image.tag | default .Values.global.connectors.image.tag | default .Values.global.image.tag | default .Values.defaultImage.tag }}"
+              imagePullPolicy: {{ .Values.image.pullPolicy | default .Values.global.connectors.image.pullPolicy | default .Values.global.image.pullPolicy | default .Values.defaultImage.pullPolicy }}
               command:
                 - "node"
                 - "/usr/src/app/component/dist/index.js"

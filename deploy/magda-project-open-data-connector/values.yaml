@@ -1,6 +1,14 @@
 global:
   image: {}
-  connectors: {}
+  connectors:
+    image: {}
+
+# image setting loadding order: (from higher priority to lower priority)
+# - Values.image.x
+# - Values.global.connectors.image.x
+# - Values.global.image.x
+# - Values.defaultImage.x
+# You can set `imagePullSecret` value to `false` (bool) to reset the value (see example below)
 
 image: 
   name: "magda-project-open-data-connector"
@@ -13,7 +21,7 @@ defaultImage:
   repository: docker.io/data61
   tag: 0.0.57-0
   pullPolicy: IfNotPresent
-  # imagePullSecret: ""
+  imagePullSecret: false
 
 resources:
   requests:
