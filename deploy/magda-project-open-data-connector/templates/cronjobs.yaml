@@ -57,6 +57,6 @@ See chart value file for details of the logic used to generate this setting valu
               configMap:
                 name: {{ .Chart.Name }}-{{ .Values.config.id }}
                 items:
-                  - key: connector-config.json
+                  - key: config.json
                     path: config.json
 {{- end }}
