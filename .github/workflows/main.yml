@@ -18,11 +18,14 @@ jobs:
       - run: yarn install
       - run: yarn build
       - run: yarn test
-      - name: helm-check
-        uses: igabaydulin/helm-check-action@0.1.4
-        env:
-          CHART_LOCATION: ./deploy/magda-project-open-data-connector
-          CHART_VALUES: ./deploy/test-deploy.yaml
+      
+      - name: Setup Helm
+        uses: azure/setup-helm@v1
+        with:
+          version: v3.2.0
+
+      - run: yarn helm-lint
+
       - name: Login to GitHub Package Repository
         env:
           GH_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
