@@ -121,7 +121,7 @@ describe("when distributions have a license as a custom URL", function(this: Moc
 
         registry = new Registry({
             jwtSecret: "secret",
-            userId: "",
+            userId: "00000000-0000-4000-8000-000000000000",
             baseUrl: "http://registry.example.com",
             tenantId: MAGDA_ADMIN_PORTAL_ID
         });

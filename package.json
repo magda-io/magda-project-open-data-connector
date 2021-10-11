@@ -16,16 +16,21 @@
     "docker-build-prod": "create-docker-context-for-node-component --build --push --tag auto",
     "retag-and-push": "retag-and-push",
     "helm-lint": "helm lint deploy/magda-project-open-data-connector -f deploy/test-deploy.yaml",
-    "test": "mocha --require ts-node/register --require tsconfig-paths/register \"src/test/**/*.spec.ts\""
+    "test": "mocha --require ts-node/register --require tsconfig-paths/register \"src/test/**/*.spec.ts\"",
+    "helm-docs": "helm-docs -t ./README.md.gotmpl -o ../../README.md",
+    "update-all-charts": "helm dep up ./deploy/magda-project-open-data-connector",
+    "add-all-chart-version-changes": "git ls-files -m | grep Chart.yaml | xargs git add && git ls-files -m | grep Chart.lock | xargs git add",
+    "add-all-helm-docs-changes": "yarn helm-docs && git ls-files -m | grep -i readme.md | xargs git add",
+    "version": "yarn update-helm-chart-version && yarn update-all-charts && yarn add-all-chart-version-changes && yarn add-all-helm-docs-changes"
   },
   "devDependencies": {
-    "@magda/scripts": "^0.0.57-0",
+    "@magda/ci-utils": "^1.0.2",
+    "@magda/docker-utils": "^0.0.60",
     "@types/jsonpath": "^0.1.29",
     "@types/lodash": "^4.14.66",
     "@types/read-pkg-up": "^3.0.1",
     "@types/request": "^2.48.1",
     "@types/turndown": "^5.0.0",
-    "@types/urijs": "^1.15.34",
     "@types/yargs": "^12.0.8",
     "@types/chai": "^4.2.8",
     "@types/mocha": "^7.0.1",
@@ -41,12 +46,12 @@
     "typescript": "^3.7.2",
     "webpack": "^4.28.3",
     "webpack-cli": "^3.3.10",
-    "@magda/connector-test-utils": "^0.0.57-0"
+    "@magda/connector-test-utils": "^0.0.60"
   },
   "dependencies": {
-    "@magda/connector-sdk": "^0.0.57-0",
-    "@magda/registry-aspects": "^0.0.57-0",
-    "@magda/utils": "^0.0.57-0",
+    "@magda/connector-sdk": "^0.0.60",
+    "@magda/registry-aspects": "^0.0.60",
+    "@magda/utils": "^0.0.60",
     "@types/to-markdown": "^3.0.0",
     "jsonpath": "^1.0.0",
     "lodash": "^4.17.4",
