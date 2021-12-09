@@ -132,6 +132,13 @@
     "@types/tough-cookie" "*"
     form-data "^2.5.0"
 
+"@types/striptags@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@types/striptags/-/striptags-3.1.1.tgz#26322004d802843db36a6bf31a9744e946194108"
+  integrity sha512-t11pzegWB32MpVjCMXD0LoSxsUQESC7CInDtVoEmnPbLWA5hMRSLBa0U/xCOdj6zFQyHlLn0Qmp76kyp/KyfQw==
+  dependencies:
+    striptags "*"
+
 "@types/to-markdown@^3.0.0":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@types/to-markdown/-/to-markdown-3.0.1.tgz#fda05d97f361cfcee874ef10a378814e8f555628"
@@ -4208,6 +4215,11 @@ strip-json-comments@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
+
+striptags@*, striptags@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/striptags/-/striptags-3.2.0.tgz#cc74a137db2de8b0b9a370006334161f7dd67052"
+  integrity sha512-g45ZOGzHDMe2bdYMdIvdAfCQkCTDMGBazSw1ypMowwGIee7ZQ5dU0rBJ8Jqgl+jAKIv4dbeE1jscZq9wid1Tkw==
 
 supports-color@6.0.0:
   version "6.0.0"

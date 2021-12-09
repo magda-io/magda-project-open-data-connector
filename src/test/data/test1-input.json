@@ -1,0 +1,25 @@
+{
+    "@type": "dcat:Catalog",
+    "dataset": [
+        {
+            "@type": "dcat:Dataset",
+            "identifier": "dataset-id",
+            "description": "dataset-desc",
+            "title": "dataset-title",
+            "license": "dataset-license-url",
+            "keyword": ["key", "words"],
+            "distribution": [
+                {
+                    "@type": "dcat:Distribution",
+                    "downloadURL": "dataset-url/dataset.csv",
+                    "mediaType": "text/csv"
+                },
+                {
+                    "@type": "dcat:Distribution",
+                    "downloadURL": "dataset-url/dataset.json",
+                    "mediaType": "application/json"
+                }
+            ]
+        }
+    ]
+}
