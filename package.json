@@ -25,8 +25,8 @@
   },
   "devDependencies": {
     "@magda/ci-utils": "^1.0.2",
-    "@magda/connector-test-utils": "^0.0.60",
-    "@magda/docker-utils": "^0.0.60",
+    "@magda/connector-test-utils": "^1.1.0-alpha.3",
+    "@magda/docker-utils": "^1.1.0-alpha.3",
     "@types/chai": "^4.2.8",
     "@types/jsonpath": "^0.1.29",
     "@types/lodash": "^4.14.66",
@@ -49,9 +49,9 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "@magda/connector-sdk": "^0.0.60",
-    "@magda/registry-aspects": "^0.0.60",
-    "@magda/utils": "^0.0.60",
+    "@magda/connector-sdk": "^1.1.0-alpha.3",
+    "@magda/registry-aspects": "^1.1.0-alpha.3",
+    "@magda/utils": "^1.1.0-alpha.3",
     "@types/to-markdown": "^3.0.0",
     "jsonpath": "^1.0.0",
     "lodash": "^4.17.4",
