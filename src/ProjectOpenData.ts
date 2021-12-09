@@ -1,6 +1,7 @@
 import { AsyncPage, formatServiceError, retry, request } from "@magda/utils";
 import { ConnectorSource } from "@magda/connector-sdk";
 import TurndownService from "turndown";
+import trimString from "./trimString";
 
 export default class ProjectOpenData implements ConnectorSource {
     public readonly id: string;
@@ -95,7 +96,7 @@ export default class ProjectOpenData implements ConnectorSource {
                         reject(error);
                         return;
                     }
-                    resolve(body);
+                    resolve(this.cleanUpSourceData(body));
                 });
             });
 
@@ -112,6 +113,21 @@ export default class ProjectOpenData implements ConnectorSource {
                     )
                 )
         ).then(data => this.getDatasetLicence(data));
+    }
+
+    private cleanUpSourceData(data: any) {
+        if (!data?.dataset?.length) {
+            return data;
+        }
+        for (let i = 0; i < data.dataset.length; i++) {
+            const dataset = data.dataset[i];
+            if (dataset?.publisher?.name) {
+                data.dataset[i].publisher.name = trimString(
+                    dataset.publisher.name
+                );
+            }
+        }
+        return data;
     }
 
     public getJsonDatasets(): AsyncPage<any[]> {

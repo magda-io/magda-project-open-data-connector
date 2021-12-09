@@ -3,7 +3,8 @@
 -   Switch to github container registry
 -   Use Node 12
 -   Multi-arch docker image release
--   strip html tags from license field
+-   #16 strip html tags from license field
+-   trim publisher name to avoid unnecessary blank
 
 # 1.0.0
 
