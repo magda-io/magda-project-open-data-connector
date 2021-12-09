@@ -31,8 +31,7 @@ jobs:
       - run: yarn helm-lint
 
       - name: Login to GitHub Package Repository
-        env:
-          GH_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
-        run: docker login docker.pkg.github.com -u magdabot -p ${GH_TOKEN}
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
       - name: Build Docker Image & Push
-        run: yarn docker-build-prod --repository=docker.pkg.github.com/magda-io/${REPO_NAME} --name=${REPO_NAME} --version=${GITHUB_SHA} --platform=linux/amd64,linux/arm64
+        run: yarn docker-build-prod --repository=ghcr.io/${{ github.repository_owner }} --name=${REPO_NAME} --version=${GITHUB_SHA} --platform=linux/amd64,linux/arm64
