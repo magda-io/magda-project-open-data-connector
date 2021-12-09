@@ -60,7 +60,7 @@ jobs:
       - name: Re-tag & Push Docker Image to Docker Hub
         run: |
           PACKAGE_JSON_VERSION=$(jq -r ".version" package.json)
-          docker container run -it --rm --net host \
+          docker container run --rm --net host \
             -v regctl-conf:/home/appuser/.regctl/ \
             regclient/regctl:latest image copy ghcr.io/${{ github.repository_owner }}/${REPO_NAME}:${GITHUB_SHA} docker.io/data61/${REPO_NAME}:${PACKAGE_JSON_VERSION}
 
