@@ -4,6 +4,7 @@ import moment from "moment";
 import URI from "urijs";
 import jsonpath from "jsonpath";
 import lodash from "lodash";
+import striptags from "striptags";
 
 export interface CreateTransformerOptions {
     id: string;
@@ -36,6 +37,7 @@ export default function createTransformer({
             URI: URI,
             jsonpath,
             lodash,
+            striptags,
             projectOpenData: Object.freeze({
                 id: id,
                 name: name,

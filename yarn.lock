@@ -32,41 +32,41 @@
     recursive-readdir "^2.2.2"
     yaml "^1.10.2"
 
-"@magda/connector-sdk@^0.0.60":
-  version "0.0.60"
-  resolved "https://registry.yarnpkg.com/@magda/connector-sdk/-/connector-sdk-0.0.60.tgz#a753915e8c106776f85e8b95b0784c437a4e90cc"
-  integrity sha512-2vxEd74qY5Bd8p1YGcI7W7BzkOTuxjdJHLgB9JD5BO8U8RIJdC+LTpQyMlPZA6wC64w8xQIQ/HDEkJD7n61ZMQ==
+"@magda/connector-sdk@^1.1.0-alpha.3":
+  version "1.1.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@magda/connector-sdk/-/connector-sdk-1.1.0-alpha.3.tgz#6b709d7eb5b47c31e6113c7e69a5a3e497ea67a0"
+  integrity sha512-kRsfHHQEyKqTnP2aJjAvb/9fTqc9ZTE2fmkcWHpzB/eSyckL2DUdfjZ+o4n06+eUGaXOEBjrGDX/BPv9N72bog==
   dependencies:
     "@types/urijs" "1.19.13"
     "@types/yargs" "^12.0.8"
 
-"@magda/connector-test-utils@^0.0.60":
-  version "0.0.60"
-  resolved "https://registry.yarnpkg.com/@magda/connector-test-utils/-/connector-test-utils-0.0.60.tgz#78c1e6d87986a38d26d74bf1ea693af71cd939aa"
-  integrity sha512-o5IkHxfg88V0aAGLEIuzFxFZzyWK0xR6nNGIB1JZuwb9q4nNtTgA56gAPCAxgyyIuZD7MxIm6Zpeluvs0xg1Mw==
+"@magda/connector-test-utils@^1.1.0-alpha.3":
+  version "1.1.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@magda/connector-test-utils/-/connector-test-utils-1.1.0-alpha.3.tgz#04a0bd114f215b6cc63dd64cc8f2aa92d0fd3870"
+  integrity sha512-qDTQgRhV18e/CkW1iYuqncFJaK2cnh4Ci4DTC2GB6y4a9n/crNuTzFU2qlOZ7CM/Dnps7vo5dRI0GDjZMmCmMA==
   dependencies:
     ts-node "^8.5.2"
     tsconfig-paths "^3.9.0"
 
-"@magda/docker-utils@^0.0.60":
-  version "0.0.60"
-  resolved "https://registry.yarnpkg.com/@magda/docker-utils/-/docker-utils-0.0.60.tgz#7e2002ebdb1472e3206c8e9b8f53730ac298dc33"
-  integrity sha512-jU6mYYeBPkm1cciDOiOqOlSn0Ru5BdhTkpL2qHq3nU+DMLNlgDCHD0sGyCm1iPRaDlo75igO200bFQAR1551pg==
+"@magda/docker-utils@^1.1.0-alpha.3":
+  version "1.1.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@magda/docker-utils/-/docker-utils-1.1.0-alpha.3.tgz#db97dd779f9e611668eb94f5efcf03e8c2b2e993"
+  integrity sha512-o5VIPB24OmhMwJgNFWPsDZS/2T2Tb4fpksDTDyZEYSshGQHdqF28MEcOsRjdpWnOgFRazwP8LRV/+C+TLXN5Yg==
   dependencies:
     fs-extra "^2.1.2"
     is-subdir "^1.0.2"
     lodash "^4.17.5"
     yargs "^12.0.5"
 
-"@magda/registry-aspects@^0.0.60":
-  version "0.0.60"
-  resolved "https://registry.yarnpkg.com/@magda/registry-aspects/-/registry-aspects-0.0.60.tgz#9fc475c655a89676b05cf9d1a56c3372c5e1f571"
-  integrity sha512-z766I1EdfdbVQc4OJcFb3+xfv3cTBwRwI0PktwsvTX/ybLj4dWNcZKpH01LcIKh/uoZ2jtPfBszScp9LUfGY3g==
+"@magda/registry-aspects@^1.1.0-alpha.3":
+  version "1.1.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@magda/registry-aspects/-/registry-aspects-1.1.0-alpha.3.tgz#005b9413bcc1f153e546a55f73e3fd06be6c0769"
+  integrity sha512-lUeCYhFUUSli8JKzNkyMm+9msb7KkK7gt5jai6YkDS6Ut6e4IkVWCq4ib2tSeO9BiZbpD4HhlgWl4NPTI8IWAw==
 
-"@magda/utils@^0.0.60":
-  version "0.0.60"
-  resolved "https://registry.yarnpkg.com/@magda/utils/-/utils-0.0.60.tgz#92d4a3dbe3be60689c68eb25d3880083344ae00c"
-  integrity sha512-tNxxHh4mr/71j9U5hiOpRueRZyl0FsuWQBcBD1egMOS1yK1LPobSMGWaFBdmlKm9jWBHo5JQCIVRFUc7ldCrFQ==
+"@magda/utils@^1.1.0-alpha.3":
+  version "1.1.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@magda/utils/-/utils-1.1.0-alpha.3.tgz#9335df8d3cdfed135e89158982eddf265f99d32d"
+  integrity sha512-OTGk7ts5AQDjLlxUNgFDvE94B44d5cUoxqgaNkstipHWxEkwqxCNF9AMX2uCyObHcLUXnPN8di7/jkTxYbJ0TQ==
   dependencies:
     "@types/request" "^2.48.1"
 
@@ -131,6 +131,13 @@
     "@types/node" "*"
     "@types/tough-cookie" "*"
     form-data "^2.5.0"
+
+"@types/striptags@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@types/striptags/-/striptags-3.1.1.tgz#26322004d802843db36a6bf31a9744e946194108"
+  integrity sha512-t11pzegWB32MpVjCMXD0LoSxsUQESC7CInDtVoEmnPbLWA5hMRSLBa0U/xCOdj6zFQyHlLn0Qmp76kyp/KyfQw==
+  dependencies:
+    striptags "*"
 
 "@types/to-markdown@^3.0.0":
   version "3.0.1"
@@ -4208,6 +4215,11 @@ strip-json-comments@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
+
+striptags@*, striptags@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/striptags/-/striptags-3.2.0.tgz#cc74a137db2de8b0b9a370006334161f7dd67052"
+  integrity sha512-g45ZOGzHDMe2bdYMdIvdAfCQkCTDMGBazSw1ypMowwGIee7ZQ5dU0rBJ8Jqgl+jAKIv4dbeE1jscZq9wid1Tkw==
 
 supports-color@6.0.0:
   version "6.0.0"

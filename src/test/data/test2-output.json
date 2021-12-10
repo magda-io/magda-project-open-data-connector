@@ -1,0 +1,242 @@
+{
+    "dist-connector-b925faff0a6a78ad1c61c40988ae6cd867319e137cbbf0d8aa35ca767f64af97": {
+        "id": "dist-connector-b925faff0a6a78ad1c61c40988ae6cd867319e137cbbf0d8aa35ca767f64af97",
+        "name": "ArcGIS Hub Dataset",
+        "aspects": {
+            "project-open-data-distribution": {
+                "@type": "dcat:Distribution",
+                "title": "ArcGIS Hub Dataset",
+                "format": "Web Page",
+                "mediaType": "text/html",
+                "accessURL": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::bushfire-abatement-zone-2"
+            },
+            "dcat-distribution-strings": {
+                "title": "ArcGIS Hub Dataset",
+                "accessURL": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::bushfire-abatement-zone-2",
+                "mediaType": "text/html",
+                "license": "Creative Common By Attribution 4.0 (Australian Capital Territory)Please read Data Terms and Conditions statement before use of the data.",
+                "format": "Web Page"
+            },
+            "source": {
+                "type": "project-open-data-distribution",
+                "url": "SOURCE",
+                "id": "connector",
+                "name": "Connector"
+            }
+        },
+        "sourceTag": "stag"
+    },
+    "dist-connector-ad97ba757cbd4874356587167e392b02556a42b317d8c37f386d273263664b27": {
+        "id": "dist-connector-ad97ba757cbd4874356587167e392b02556a42b317d8c37f386d273263664b27",
+        "name": "ArcGIS GeoService",
+        "aspects": {
+            "project-open-data-distribution": {
+                "@type": "dcat:Distribution",
+                "title": "ArcGIS GeoService",
+                "format": "ArcGIS GeoServices REST API",
+                "mediaType": "application/json",
+                "accessURL": "https://data.actmapi.act.gov.au/arcgis/rest/services/ACT_EMERGENCY_MANAGEMENT/esa_sbmp_BAZ_current/MapServer/0"
+            },
+            "dcat-distribution-strings": {
+                "title": "ArcGIS GeoService",
+                "accessURL": "https://data.actmapi.act.gov.au/arcgis/rest/services/ACT_EMERGENCY_MANAGEMENT/esa_sbmp_BAZ_current/MapServer/0",
+                "mediaType": "application/json",
+                "license": "Creative Common By Attribution 4.0 (Australian Capital Territory)Please read Data Terms and Conditions statement before use of the data.",
+                "format": "ArcGIS GeoServices REST API"
+            },
+            "source": {
+                "type": "project-open-data-distribution",
+                "url": "SOURCE",
+                "id": "connector",
+                "name": "Connector"
+            }
+        },
+        "sourceTag": "stag"
+    },
+    "dist-connector-09552436567df17d580831919816ac93a1a42b191c6faf111213a9321896ec2d": {
+        "id": "dist-connector-09552436567df17d580831919816ac93a1a42b191c6faf111213a9321896ec2d",
+        "name": "GeoJSON",
+        "aspects": {
+            "project-open-data-distribution": {
+                "@type": "dcat:Distribution",
+                "title": "GeoJSON",
+                "format": "GeoJSON",
+                "mediaType": "application/vnd.geo+json",
+                "accessURL": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::bushfire-abatement-zone-2.geojson?outSR=%7B%22latestWkid%22%3A7855%2C%22wkid%22%3A7855%7D"
+            },
+            "dcat-distribution-strings": {
+                "title": "GeoJSON",
+                "accessURL": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::bushfire-abatement-zone-2.geojson?outSR=%7B%22latestWkid%22%3A7855%2C%22wkid%22%3A7855%7D",
+                "mediaType": "application/vnd.geo+json",
+                "license": "Creative Common By Attribution 4.0 (Australian Capital Territory)Please read Data Terms and Conditions statement before use of the data.",
+                "format": "GeoJSON"
+            },
+            "source": {
+                "type": "project-open-data-distribution",
+                "url": "SOURCE",
+                "id": "connector",
+                "name": "Connector"
+            }
+        },
+        "sourceTag": "stag"
+    },
+    "dist-connector-0b9d29ec85b546eaf2908a4f19e9d8fe82c1bd324c37f738a7e7c32b555ab17f": {
+        "id": "dist-connector-0b9d29ec85b546eaf2908a4f19e9d8fe82c1bd324c37f738a7e7c32b555ab17f",
+        "name": "CSV",
+        "aspects": {
+            "project-open-data-distribution": {
+                "@type": "dcat:Distribution",
+                "title": "CSV",
+                "format": "CSV",
+                "mediaType": "text/csv",
+                "accessURL": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::bushfire-abatement-zone-2.csv?outSR=%7B%22latestWkid%22%3A7855%2C%22wkid%22%3A7855%7D"
+            },
+            "dcat-distribution-strings": {
+                "title": "CSV",
+                "accessURL": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::bushfire-abatement-zone-2.csv?outSR=%7B%22latestWkid%22%3A7855%2C%22wkid%22%3A7855%7D",
+                "mediaType": "text/csv",
+                "license": "Creative Common By Attribution 4.0 (Australian Capital Territory)Please read Data Terms and Conditions statement before use of the data.",
+                "format": "CSV"
+            },
+            "source": {
+                "type": "project-open-data-distribution",
+                "url": "SOURCE",
+                "id": "connector",
+                "name": "Connector"
+            }
+        },
+        "sourceTag": "stag"
+    },
+    "dist-connector-8db60d94f83a60d2c760c9f302d63593c0c63e1a8af46111af10981bea9c55e0": {
+        "id": "dist-connector-8db60d94f83a60d2c760c9f302d63593c0c63e1a8af46111af10981bea9c55e0",
+        "name": "KML",
+        "aspects": {
+            "project-open-data-distribution": {
+                "@type": "dcat:Distribution",
+                "title": "KML",
+                "format": "KML",
+                "mediaType": "application/vnd.google-earth.kml+xml",
+                "accessURL": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::bushfire-abatement-zone-2.kml?outSR=%7B%22latestWkid%22%3A7855%2C%22wkid%22%3A7855%7D"
+            },
+            "dcat-distribution-strings": {
+                "title": "KML",
+                "accessURL": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::bushfire-abatement-zone-2.kml?outSR=%7B%22latestWkid%22%3A7855%2C%22wkid%22%3A7855%7D",
+                "mediaType": "application/vnd.google-earth.kml+xml",
+                "license": "Creative Common By Attribution 4.0 (Australian Capital Territory)Please read Data Terms and Conditions statement before use of the data.",
+                "format": "KML"
+            },
+            "source": {
+                "type": "project-open-data-distribution",
+                "url": "SOURCE",
+                "id": "connector",
+                "name": "Connector"
+            }
+        },
+        "sourceTag": "stag"
+    },
+    "dist-connector-71fab07c0a26691277c812e9308fd42d7940e786b34585348c8f9d6541c1e326": {
+        "id": "dist-connector-71fab07c0a26691277c812e9308fd42d7940e786b34585348c8f9d6541c1e326",
+        "name": "Shapefile",
+        "aspects": {
+            "project-open-data-distribution": {
+                "@type": "dcat:Distribution",
+                "title": "Shapefile",
+                "format": "ZIP",
+                "mediaType": "application/zip",
+                "accessURL": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::bushfire-abatement-zone-2.zip?outSR=%7B%22latestWkid%22%3A7855%2C%22wkid%22%3A7855%7D"
+            },
+            "dcat-distribution-strings": {
+                "title": "Shapefile",
+                "accessURL": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::bushfire-abatement-zone-2.zip?outSR=%7B%22latestWkid%22%3A7855%2C%22wkid%22%3A7855%7D",
+                "mediaType": "application/zip",
+                "license": "Creative Common By Attribution 4.0 (Australian Capital Territory)Please read Data Terms and Conditions statement before use of the data.",
+                "format": "ZIP"
+            },
+            "source": {
+                "type": "project-open-data-distribution",
+                "url": "SOURCE",
+                "id": "connector",
+                "name": "Connector"
+            }
+        },
+        "sourceTag": "stag"
+    },
+    "org-connector-ACT Government Online Maps and Apps": {
+        "id": "org-connector-ACT Government Online Maps and Apps",
+        "name": "ACT Government Online Maps and Apps",
+        "aspects": {
+            "source": {
+                "type": "project-open-data-organization",
+                "url": "SOURCE",
+                "id": "connector",
+                "name": "Connector"
+            },
+            "organization-details": {
+                "name": "ACT Government Online Maps and Apps",
+                "title": "ACT Government Online Maps and Apps",
+                "email": "spatialdata@act.gov.au"
+            }
+        },
+        "sourceTag": "stag"
+    },
+    "ds-connector-https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::bushfire-abatement-zone-2": {
+        "id": "ds-connector-https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::bushfire-abatement-zone-2",
+        "name": "Bushfire Abatement Zone",
+        "aspects": {
+            "project-open-data-dataset": {
+                "@type": "dcat:Dataset",
+                "identifier": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::bushfire-abatement-zone-2",
+                "license": "<div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:10pt;'><a href='https://creativecommons.org/licenses/by/4.0/' rel='nofollow ugc' style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size:small; color:rgb(0, 121, 193); text-decoration-line:none;'>Creative<span style='letter-spacing:0.35pt;'> </span>Common<span style='letter-spacing:0.35pt;'> </span><span style='letter-spacing:0pt;'>By</span><span style='letter-spacing:0.25pt;'> </span>Attribution<span style='letter-spacing:0.35pt;'> </span>4.0<span style='letter-spacing:0.3pt;'> </span>(Australian<span style='letter-spacing:0.4pt;'> </span>Capital<span style='letter-spacing:0.3pt;'> </span>Territory)</a><font face='Arial, Verdana' size='2'><br /></font></div><div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:10pt;'><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size:small; color:rgb(0, 0, 31); letter-spacing:-0.05pt;'>Please read </span><a href='https://www.actmapi.act.gov.au/terms.html' rel='nofollow ugc' target='_blank'>Data Terms and Conditions</a><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size:small; color:rgb(0, 0, 31); letter-spacing:-0.05pt;'> statement before use of the data.</span></div>",
+                "landingPage": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::bushfire-abatement-zone-2",
+                "title": "Bushfire Abatement Zone",
+                "description": "<div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:13.3333px; text-align:justify;'><font face='Arial, Verdana' style='font-weight:bold;'>Part of the Strategic Bushfire Management Plan - Bushfire Abatement Zone</font></div><div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:13.3333px; text-align:justify;'><font face='Arial, Verdana' style='font-weight:bold;'><br /></font></div><div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:10pt;'><span style='font-size:small;'>Under the Emergencies Act, the Commissioner has declared a BAZ. </span></div><div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:10pt;'><span style='font-size:small;'><br /></span></div><div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:10pt;'><font face='Arial, Verdana' size='2'>The BAZ surrounds Canberra and extends west towards the Murrumbidgee River. It is a subset of the BPA, and was developed to identify rural areas where specific measures are required to reduce risk to life and property to the built-up area of Canberra. These measures include land-use constraints, planning requirements for land managers (both public and private) and pre-incident planning for bushfires. </font></div><div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:10pt;'><font face='Arial, Verdana' size='2'>The BAZ will be reviewed as required to reflect changes in land use and tenure, and will be approved by the Commissioner.</font></div><div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:10pt;'><font face='Arial, Verdana' size='2'><br /></font></div><div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:10pt;'><a href='https://creativecommons.org/licenses/by/4.0/' rel='nofollow ugc' style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size:small; color:rgb(0, 121, 193); text-decoration-line:none;'>Creative<span style='letter-spacing:0.35pt;'> </span>Common<span style='letter-spacing:0.35pt;'> </span><span style='letter-spacing:0pt;'>By</span><span style='letter-spacing:0.25pt;'> </span>Attribution<span style='letter-spacing:0.35pt;'> </span>4.0<span style='letter-spacing:0.3pt;'> </span>(Australian<span style='letter-spacing:0.4pt;'> </span>Capital<span style='letter-spacing:0.3pt;'> </span>Territory)</a><font face='Arial, Verdana' size='2'><br /></font></div><div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:10pt;'><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size:small; color:rgb(0, 0, 31); letter-spacing:-0.05pt;'>Please read </span><a href='https://www.actmapi.act.gov.au/terms.html' rel='nofollow ugc' target='_blank'>Data Terms and Conditions</a><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size:small; color:rgb(0, 0, 31); letter-spacing:-0.05pt;'> statement before use of the data.</span><br /></div>",
+                "keyword": ["sbmp", "GDA2020", "Emergency Management"],
+                "issued": "2021-08-25T05:54:47.000Z",
+                "modified": "2021-09-03T06:07:01.000Z",
+                "publisher": {
+                    "name": "ACT Government Online Maps and Apps"
+                },
+                "contactPoint": {
+                    "@type": "vcard:Contact",
+                    "fn": "ACTmapi",
+                    "hasEmail": "mailto:spatialdata@act.gov.au"
+                },
+                "accessLevel": "public",
+                "spatial": "148.9099,-35.5264,149.2687,-35.1218",
+                "theme": ["geospatial"]
+            },
+            "dcat-dataset-strings": {
+                "title": "Bushfire Abatement Zone",
+                "description": "<div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:13.3333px; text-align:justify;'><font face='Arial, Verdana' style='font-weight:bold;'>Part of the Strategic Bushfire Management Plan - Bushfire Abatement Zone</font></div><div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:13.3333px; text-align:justify;'><font face='Arial, Verdana' style='font-weight:bold;'><br /></font></div><div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:10pt;'><span style='font-size:small;'>Under the Emergencies Act, the Commissioner has declared a BAZ. </span></div><div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:10pt;'><span style='font-size:small;'><br /></span></div><div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:10pt;'><font face='Arial, Verdana' size='2'>The BAZ surrounds Canberra and extends west towards the Murrumbidgee River. It is a subset of the BPA, and was developed to identify rural areas where specific measures are required to reduce risk to life and property to the built-up area of Canberra. These measures include land-use constraints, planning requirements for land managers (both public and private) and pre-incident planning for bushfires. </font></div><div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:10pt;'><font face='Arial, Verdana' size='2'>The BAZ will be reviewed as required to reflect changes in land use and tenure, and will be approved by the Commissioner.</font></div><div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:10pt;'><font face='Arial, Verdana' size='2'><br /></font></div><div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:10pt;'><a href='https://creativecommons.org/licenses/by/4.0/' rel='nofollow ugc' style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size:small; color:rgb(0, 121, 193); text-decoration-line:none;'>Creative<span style='letter-spacing:0.35pt;'> </span>Common<span style='letter-spacing:0.35pt;'> </span><span style='letter-spacing:0pt;'>By</span><span style='letter-spacing:0.25pt;'> </span>Attribution<span style='letter-spacing:0.35pt;'> </span>4.0<span style='letter-spacing:0.3pt;'> </span>(Australian<span style='letter-spacing:0.4pt;'> </span>Capital<span style='letter-spacing:0.3pt;'> </span>Territory)</a><font face='Arial, Verdana' size='2'><br /></font></div><div style='margin:0px; padding:0px; color:rgb(51, 51, 51); font-family:Arial, Verdana; font-size:10pt;'><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size:small; color:rgb(0, 0, 31); letter-spacing:-0.05pt;'>Please read </span><a href='https://www.actmapi.act.gov.au/terms.html' rel='nofollow ugc' target='_blank'>Data Terms and Conditions</a><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size:small; color:rgb(0, 0, 31); letter-spacing:-0.05pt;'> statement before use of the data.</span><br /></div>",
+                "modified": "2021-09-03T06:07:01.000Z",
+                "publisher": "ACT Government Online Maps and Apps",
+                "spatial": "148.9099,-35.5264,149.2687,-35.1218",
+                "temporal": {},
+                "themes": ["geospatial"],
+                "keywords": ["sbmp", "GDA2020", "Emergency Management"],
+                "contactPoint": "ACTmapi",
+                "landingPage": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::bushfire-abatement-zone-2"
+            },
+            "source": {
+                "type": "project-open-data-dataset",
+                "url": "SOURCE",
+                "id": "connector",
+                "name": "Connector"
+            },
+            "dataset-distributions": {
+                "distributions": [
+                    "dist-connector-b925faff0a6a78ad1c61c40988ae6cd867319e137cbbf0d8aa35ca767f64af97",
+                    "dist-connector-ad97ba757cbd4874356587167e392b02556a42b317d8c37f386d273263664b27",
+                    "dist-connector-09552436567df17d580831919816ac93a1a42b191c6faf111213a9321896ec2d",
+                    "dist-connector-0b9d29ec85b546eaf2908a4f19e9d8fe82c1bd324c37f738a7e7c32b555ab17f",
+                    "dist-connector-8db60d94f83a60d2c760c9f302d63593c0c63e1a8af46111af10981bea9c55e0",
+                    "dist-connector-71fab07c0a26691277c812e9308fd42d7940e786b34585348c8f9d6541c1e326"
+                ]
+            },
+            "dataset-publisher": {
+                "publisher": "org-connector-ACT Government Online Maps and Apps"
+            }
+        },
+        "sourceTag": "stag"
+    }
+}
