@@ -75,10 +75,10 @@
             "dcat-dataset-strings": {
                 "title": "dataset-title",
                 "description": "dataset-desc",
-                "issued": "2021-08-25T00:00:00+10:00",
+                "issued": "2021-08-24T14:00:00.000Z",
                 "temporal": {},
                 "keywords": ["key", "words"],
-                "modified": "2021-09-03T00:00:00+10:00"
+                "modified": "2021-09-02T14:00:00.000Z"
             },
             "source": {
                 "type": "project-open-data-dataset",
