@@ -3,6 +3,19 @@ import { Dayjs } from "dayjs";
 
 const ISO_8601_FULL = /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d+)?(([+-]\d\d:\d\d)|Z)?$/i;
 const ISO_8601 = /^\d{4}(-\d\d(-\d\d(T\d\d:\d\d(:\d\d)?(\.\d+)?(([+-]\d\d:\d\d)|Z)?)?)?)?$/i;
+const offset = /[-+]\d\d(:{0,1})\d\d/;
+
+//const supportDateFormats = ["DD MMM YY HH:mm", "D MMM YY HH:mm"];
+
+function hasTimezoneInfo(dateStr: string) {
+    if (dateStr.match(offset)) {
+        return true;
+    }
+    if (dateStr.match(/(utc|gmt)/i)) {
+        return true;
+    }
+    return false;
+}
 
 function toDateTimeString(dateStr: string): string {
     if (!dateStr) {
@@ -17,8 +30,14 @@ function toDateTimeString(dateStr: string): string {
         let dateTime: Dayjs;
         if (ISO_8601.test(dateStr)) {
             dateTime = dayjs.tz(dateStr, getDefaultTimeZone());
-        } else {
+        } else if (hasTimezoneInfo(dateStr)) {
             dateTime = dayjs(dateStr);
+        } else {
+            // no timezone offset in input string, we manually append defaultTimeZone offset
+            const offset = dayjs
+                .tz(undefined, getDefaultTimeZone())
+                .format("ZZ");
+            dateTime = dayjs(dateStr + " " + offset);
         }
 
         if (dateTime && dateTime.isValid()) {
@@ -27,7 +46,6 @@ function toDateTimeString(dateStr: string): string {
             return undefined;
         }
     } catch (e) {
-        console.log(e);
         return undefined;
     }
 }
