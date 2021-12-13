@@ -38,14 +38,14 @@ module.exports = {
     },
     resolve: {
         mainFields: ["browser", "main"],
+        fallback: {
+            fs: false
+        },
         plugins: [
             new TsconfigPathsPlugin({
                 configFile
             })
         ],
         extensions: [".tsx", ".ts", ".js"]
-    },
-    node: {
-        fs: "empty"
     }
 };

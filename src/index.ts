@@ -9,9 +9,7 @@ import organizationAspectBuilders from "./organizationAspectBuilders";
 import datasetAspectBuilders from "./datasetAspectBuilders";
 import distributionAspectBuilders from "./distributionAspectBuilders";
 import yargs from "yargs";
-import moment from "moment-timezone";
-
-moment.suppressDeprecationWarnings = true;
+import { setDefaultTimeZone } from "./dayJsUtils";
 
 const argv = addJwtSecretFromEnvVar(
     yargs
@@ -89,7 +87,7 @@ const argv = addJwtSecretFromEnvVar(
 
 if (argv.defaultTimeZone) {
     console.log(`Setting default timezone to ${argv.defaultTimeZone}`);
-    moment.tz.setDefault(argv.defaultTimeZone);
+    setDefaultTimeZone(argv.defaultTimeZone);
 } else {
     console.log("Skip setting default timezone.");
 }
