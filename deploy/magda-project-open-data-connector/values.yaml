@@ -50,6 +50,9 @@ config:
   ## Unique id to identify this connector and records that are harvested from it
   id: default-project-open-data-connector
 
+  # -- The default time zone that will be used when timezone information is not available from source data fields.
+  defaultTimeZone: "Australia/Sydney"
+
   ## Friendly readable name
   ## name: 
   

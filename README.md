@@ -38,18 +38,19 @@ Kubernetes: `>= 1.14.0-0`
 
 ## Values
 
-| Key                                | Type   | Default                                 | Description |
-| ---------------------------------- | ------ | --------------------------------------- | ----------- |
-| config.id                          | string | `"default-project-open-data-connector"` |             |
-| defaultImage.imagePullSecret       | bool   | `false`                                 |             |
-| defaultImage.pullPolicy            | string | `"IfNotPresent"`                        |             |
-| defaultImage.repository            | string | `"docker.io/data61"`                    |             |
-| defaultSettings.includeCronJobs    | bool   | `true`                                  |             |
-| defaultSettings.includeInitialJobs | bool   | `false`                                 |             |
-| defaultTenantId                    | int    | `0`                                     |             |
-| global.connectors.image            | object | `{}`                                    |             |
-| global.image                       | object | `{}`                                    |             |
-| image.name                         | string | `"magda-project-open-data-connector"`   |             |
-| resources.limits.cpu               | string | `"100m"`                                |             |
-| resources.requests.cpu             | string | `"50m"`                                 |             |
-| resources.requests.memory          | string | `"30Mi"`                                |             |
+| Key                                | Type   | Default                                 | Description                                                                                                 |
+| ---------------------------------- | ------ | --------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| config.defaultTimeZone             | string | `"Australia/Sydney"`                    | The default time zone that will be used when timezone information is not available from source data fields. |
+| config.id                          | string | `"default-project-open-data-connector"` |                                                                                                             |
+| defaultImage.imagePullSecret       | bool   | `false`                                 |                                                                                                             |
+| defaultImage.pullPolicy            | string | `"IfNotPresent"`                        |                                                                                                             |
+| defaultImage.repository            | string | `"docker.io/data61"`                    |                                                                                                             |
+| defaultSettings.includeCronJobs    | bool   | `true`                                  |                                                                                                             |
+| defaultSettings.includeInitialJobs | bool   | `false`                                 |                                                                                                             |
+| defaultTenantId                    | int    | `0`                                     |                                                                                                             |
+| global.connectors.image            | object | `{}`                                    |                                                                                                             |
+| global.image                       | object | `{}`                                    |                                                                                                             |
+| image.name                         | string | `"magda-project-open-data-connector"`   |                                                                                                             |
+| resources.limits.cpu               | string | `"100m"`                                |                                                                                                             |
+| resources.requests.cpu             | string | `"50m"`                                 |                                                                                                             |
+| resources.requests.memory          | string | `"30Mi"`                                |                                                                                                             |

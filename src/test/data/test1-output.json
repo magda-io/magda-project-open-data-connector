@@ -65,16 +65,20 @@
             "project-open-data-dataset": {
                 "@type": "dcat:Dataset",
                 "identifier": "dataset-id",
+                "issued": "2021-08-25",
                 "description": "dataset-desc",
                 "title": "dataset-title",
                 "license": "dataset-license-url",
+                "modified": "2021-09-03",
                 "keyword": ["key", "words"]
             },
             "dcat-dataset-strings": {
                 "title": "dataset-title",
                 "description": "dataset-desc",
+                "issued": "2021-08-25T00:00:00+10:00",
                 "temporal": {},
-                "keywords": ["key", "words"]
+                "keywords": ["key", "words"],
+                "modified": "2021-09-03T00:00:00+10:00"
             },
             "source": {
                 "type": "project-open-data-dataset",

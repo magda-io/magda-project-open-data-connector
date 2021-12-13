@@ -8,6 +8,8 @@
             "title": "dataset-title",
             "license": "dataset-license-url",
             "keyword": ["key", "words"],
+            "issued": "2021-08-25",
+            "modified": "2021-09-03",
             "distribution": [
                 {
                     "@type": "dcat:Distribution",
