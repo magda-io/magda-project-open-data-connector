@@ -1,4 +1,4 @@
-import moment from "moment-timezone";
+import dayjs from "dayjs";
 
 const ISO_8601_FULL = /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d+)?(([+-]\d\d:\d\d)|Z)?$/i;
 
@@ -11,7 +11,7 @@ function toDateTimeString(dateStr: string): string {
         return dateStr;
     }
     try {
-        const dateTime = moment(dateStr);
+        const dateTime = dayjs(dateStr);
         if (dateTime.isValid()) {
             return dateTime.format();
         } else {

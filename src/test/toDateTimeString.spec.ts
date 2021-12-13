@@ -1,8 +1,7 @@
 import {} from "mocha";
 import { expect } from "chai";
-import moment from "moment-timezone";
-moment.suppressDeprecationWarnings = true;
-moment.tz.setDefault("Australia/Sydney");
+import setupDayjs from "../setupDayjs";
+setupDayjs("Australia/Sydney");
 
 import toDateTimeString from "../toDateTimeString";
 
