@@ -1,6 +1,6 @@
 import { AspectBuilder, cleanOrgTitle } from "@magda/connector-sdk";
 import ProjectOpenDataTransformer from "./ProjectOpenDataTransformer";
-import dayjs from "dayjs";
+import { getDayJs } from "./dayJsUtils";
 import URI from "urijs";
 import jsonpath from "jsonpath";
 import lodash from "lodash";
@@ -33,7 +33,7 @@ export default function createTransformer({
         organizationAspectBuilders: organizationAspectBuilders,
         tenantId: tenantId,
         libraries: {
-            dayjs,
+            dayjs: getDayJs(),
             cleanOrgTitle: cleanOrgTitle,
             URI: URI,
             jsonpath,

@@ -9,7 +9,7 @@ import organizationAspectBuilders from "./organizationAspectBuilders";
 import datasetAspectBuilders from "./datasetAspectBuilders";
 import distributionAspectBuilders from "./distributionAspectBuilders";
 import yargs from "yargs";
-import setupDayjs from "./setupDayjs";
+import { setDefaultTimeZone } from "./dayJsUtils";
 
 const argv = addJwtSecretFromEnvVar(
     yargs
@@ -87,7 +87,7 @@ const argv = addJwtSecretFromEnvVar(
 
 if (argv.defaultTimeZone) {
     console.log(`Setting default timezone to ${argv.defaultTimeZone}`);
-    setupDayjs(argv.defaultTimeZone);
+    setDefaultTimeZone(argv.defaultTimeZone);
 } else {
     console.log("Skip setting default timezone.");
 }
