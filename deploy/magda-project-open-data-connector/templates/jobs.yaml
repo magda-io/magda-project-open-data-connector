@@ -33,6 +33,8 @@ spec:
             - mountPath: /etc/config
               name: config
           env:
+            - name: DEFAULT_TIMEZONE
+              value: {{ .Values.config.defaultTimeZone | quote }}
             - name: USER_ID
               value: 00000000-0000-4000-8000-000000000000
             - name: JWT_SECRET

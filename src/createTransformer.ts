@@ -1,10 +1,11 @@
 import { AspectBuilder, cleanOrgTitle } from "@magda/connector-sdk";
 import ProjectOpenDataTransformer from "./ProjectOpenDataTransformer";
-import moment from "moment";
+import { getDayJs } from "./dayJsUtils";
 import URI from "urijs";
 import jsonpath from "jsonpath";
 import lodash from "lodash";
 import striptags from "striptags";
+import toDateTimeString from "./toDateTimeString";
 
 export interface CreateTransformerOptions {
     id: string;
@@ -32,12 +33,13 @@ export default function createTransformer({
         organizationAspectBuilders: organizationAspectBuilders,
         tenantId: tenantId,
         libraries: {
-            moment: moment,
+            dayjs: getDayJs(),
             cleanOrgTitle: cleanOrgTitle,
             URI: URI,
             jsonpath,
             lodash,
             striptags,
+            toDateTimeString,
             projectOpenData: Object.freeze({
                 id: id,
                 name: name,

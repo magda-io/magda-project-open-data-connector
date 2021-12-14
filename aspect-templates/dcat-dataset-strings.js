@@ -1,10 +1,11 @@
+var toDateTimeString = libraries.toDateTimeString;
 var parsedTemporal = dataset.temporal ? dataset.temporal.split("/") : [];
 
 return {
     title: dataset.title,
     description: dataset.description,
-    issued: dataset.issues,
-    modified: dataset.modified,
+    issued: toDateTimeString(dataset.issued),
+    modified: toDateTimeString(dataset.modified),
     languages: dataset.language,
     publisher: dataset.publisher ? dataset.publisher.name : undefined,
     accrualPeriodicity: dataset.accrualPeriodicity,

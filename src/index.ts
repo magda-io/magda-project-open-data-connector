@@ -9,6 +9,7 @@ import organizationAspectBuilders from "./organizationAspectBuilders";
 import datasetAspectBuilders from "./datasetAspectBuilders";
 import distributionAspectBuilders from "./distributionAspectBuilders";
 import yargs from "yargs";
+import { setDefaultTimeZone } from "./dayJsUtils";
 
 const argv = addJwtSecretFromEnvVar(
     yargs
@@ -72,8 +73,24 @@ const argv = addJwtSecretFromEnvVar(
                 "The magda tenant id to use when making requests to the registry",
             type: "number",
             demand: true
+        })
+        .option("defaultTimeZone", {
+            describe:
+                "The default time zone that will be used when timezone information is not available from source data fields",
+            type: "string",
+            demand: true,
+            default:
+                process.env.DEFAULT_TIMEZONE ||
+                process.env.npm_package_config_defaultTimeZone
         }).argv
 );
+
+if (argv.defaultTimeZone) {
+    console.log(`Setting default timezone to ${argv.defaultTimeZone}`);
+    setDefaultTimeZone(argv.defaultTimeZone);
+} else {
+    console.log("Skip setting default timezone.");
+}
 
 const source = new ProjectOpenData({
     id: argv.id,
