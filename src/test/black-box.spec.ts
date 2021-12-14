@@ -23,6 +23,19 @@ const TEST_CASES = [
         output: JSON.parse(
             fs.readFileSync(path.resolve(testDataDir, "test2-output.json"))
         )
+    },
+    // --- test
+    {
+        input: JSON.parse(
+            fs.readFileSync(
+                path.resolve(testDataDir, "act-sports-field-input.json")
+            )
+        ),
+        output: JSON.parse(
+            fs.readFileSync(
+                path.resolve(testDataDir, "act-sports-field-output.json")
+            )
+        )
     }
 ];
 

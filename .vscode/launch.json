@@ -11,6 +11,9 @@
             "name": "Debug test case",
             "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
             "cwd": "${workspaceRoot}",
+            "env": {
+                "DEFAULT_TIMEZONE": "Australia/Sydney"
+            },
             "args": [
                 "--require",
                 "ts-node/register",

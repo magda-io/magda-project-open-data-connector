@@ -1,0 +1,80 @@
+{
+    "@context": "https://project-open-data.cio.gov/v1.1/schema/catalog.jsonld",
+    "@type": "dcat:Catalog",
+    "conformsTo": "https://project-open-data.cio.gov/v1.1/schema",
+    "describedBy": "https://project-open-data.cio.gov/v1.1/schema/catalog.json",
+    "dataset": [
+        {
+            "@type": "dcat:Dataset",
+            "identifier": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::sportsfield",
+            "license": "http://creativecommons.org/licenses/by/4.0",
+            "landingPage": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::sportsfield",
+            "title": "Sportsfield",
+            "description": "A field is part of a sportsground, and are identified by a field number.  Fields may overlap and field boundaries may vary in dimensions depending on the field type",
+            "keyword": [
+                "ACT Government",
+                "Sports",
+                "Ground",
+                "Field",
+                "Recreation"
+            ],
+            "issued": "2018-09-07T06:50:06.000Z",
+            "modified": "2018-12-12T00:35:10.000Z",
+            "publisher": {
+                "name": "            ACT Government Online Maps and Apps"
+            },
+            "contactPoint": {
+                "@type": "vcard:Contact",
+                "fn": "ACTmapi",
+                "hasEmail": "mailto:spatialdata@act.gov.au"
+            },
+            "accessLevel": "public",
+            "spatial": "149.0199,-35.4718,149.1591,-35.154",
+            "distribution": [
+                {
+                    "@type": "dcat:Distribution",
+                    "title": "ArcGIS Hub Dataset",
+                    "format": "Web Page",
+                    "mediaType": "text/html",
+                    "accessURL": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::sportsfield"
+                },
+                {
+                    "@type": "dcat:Distribution",
+                    "title": "ArcGIS GeoService",
+                    "format": "ArcGIS GeoServices REST API",
+                    "mediaType": "application/json",
+                    "accessURL": "https://data.actmapi.act.gov.au/arcgis/rest/services/actmapi/Sportsgrounds/MapServer/0"
+                },
+                {
+                    "@type": "dcat:Distribution",
+                    "title": "GeoJSON",
+                    "format": "GeoJSON",
+                    "mediaType": "application/vnd.geo+json",
+                    "accessURL": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::sportsfield.geojson?outSR=%7B%22latestWkid%22%3A28355%2C%22wkid%22%3A28355%7D"
+                },
+                {
+                    "@type": "dcat:Distribution",
+                    "title": "CSV",
+                    "format": "CSV",
+                    "mediaType": "text/csv",
+                    "accessURL": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::sportsfield.csv?outSR=%7B%22latestWkid%22%3A28355%2C%22wkid%22%3A28355%7D"
+                },
+                {
+                    "@type": "dcat:Distribution",
+                    "title": "KML",
+                    "format": "KML",
+                    "mediaType": "application/vnd.google-earth.kml+xml",
+                    "accessURL": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::sportsfield.kml?outSR=%7B%22latestWkid%22%3A28355%2C%22wkid%22%3A28355%7D"
+                },
+                {
+                    "@type": "dcat:Distribution",
+                    "title": "Shapefile",
+                    "format": "ZIP",
+                    "mediaType": "application/zip",
+                    "accessURL": "https://actmapi-actgov.opendata.arcgis.com/datasets/ACTGOV::sportsfield.zip?outSR=%7B%22latestWkid%22%3A28355%2C%22wkid%22%3A28355%7D"
+                }
+            ],
+            "theme": ["geospatial"]
+        }
+    ]
+}
