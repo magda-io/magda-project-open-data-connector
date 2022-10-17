@@ -17,7 +17,7 @@ import ProjectOpenDataTransformer from "../ProjectOpenDataTransformer";
 
 const { MAGDA_ADMIN_PORTAL_ID } = TenantConsts;
 
-describe("when distributions have a license as a custom URL", function(this: Mocha.ISuiteCallbackContext) {
+describe("when distributions have a license as a custom URL", function(this: Mocha.Suite) {
     let registry: Registry;
     let source: ProjectOpenData;
     let transformer: ProjectOpenDataTransformer;
