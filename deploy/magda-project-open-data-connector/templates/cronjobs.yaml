@@ -4,7 +4,7 @@ See chart value file for details of the logic used to generate this setting valu
 {{- $includeCronJobs := (ne (.Values.includeCronJobs | typeOf) "<nil>") | ternary .Values.includeCronJobs ( (ne (.Values.global.connectors.includeCronJobs | typeOf) "<nil>") | ternary .Values.global.connectors.includeCronJobs .Values.defaultSettings.includeCronJobs) -}}
 {{- if $includeCronJobs }}
 ---
-apiVersion: batch/v1beta1
+apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: connector-{{ .Values.config.id }}
