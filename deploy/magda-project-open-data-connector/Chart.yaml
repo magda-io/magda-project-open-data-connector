@@ -1,8 +1,8 @@
 apiVersion: v2
 name: magda-project-open-data-connector
 description: A Helm chart for Magda Project Open Data Connector
-version: "1.1.0"
-kubeVersion: ">= 1.14.0-0"
+version: "2.0.0"
+kubeVersion: ">= 1.21.0"
 home: "https://github.com/magda-io/magda-project-open-data-connector"
 sources:
   [
@@ -12,5 +12,5 @@ annotations:
   magdaModuleType: "connector"
 dependencies:
   - name: magda-common
-    version: "1.0.0-alpha.4"
-    repository: "https://charts.magda.io"
+    version: "2.1.1"
+    repository: "oci://ghcr.io/magda-io/charts"
