@@ -1,3 +1,8 @@
+# 2.1.0
+
+-   Upgrade to Node.js 22: the docker image now uses `node:22-alpine` (was `node:16-alpine`), and CI uses Node.js 22
+-   Upgrade GitHub Actions (checkout, setup-node, setup-qemu & setup-buildx) to current versions
+
 # 2.0.0
 
 -   Upgrade to typescript 4 & webpack 5
